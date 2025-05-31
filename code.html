@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Download Books, Games & Apps</title>
+<style>
+    /* Base styling */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f7f8;
+        color: #444;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        background: #3f51b5;
+        color: white;
+        padding: 25px 15px;
+        text-align: center;
+        font-size: 2.2rem;
+        letter-spacing: 1.2px;
+        font-weight: 600;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    main {
+        flex: 1;
+        display: flex;
+        max-width: 1200px;
+        margin: 40px auto;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 15px;
+    }
+    section {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        width: 350px;
+        max-width: 90vw;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #3f51b5;
+        border-bottom: 2px solid #c5cae9;
+        padding-bottom: 8px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
+    li {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f0f0f0;
+        padding: 14px 18px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        font-size: 1rem;
+        cursor: default;
+    }
+    li:hover {
+        background-color: #d1d9ff;
+    }
+    a.download-btn {
+        background-color: #3f51b5;
+        color: white;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+        user-select: none;
+    }
+    a.download-btn:hover {
+        background-color: #283593;
+    }
+    footer {
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 0.9rem;
+        color: #777;
+        background: #e1e5f0;
+        margin-top: auto;
+    }
+    @media (max-width: 900px) {
+        main {
+            justify-content: center;
+            gap: 25px;
+        }
+        section {
+            width: 90vw;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    Download Books, Games & Apps
+</header>
+<main>
+    <section>
+        <h2>Books</h2>
+        <ul>
+            <li>
+                Eloquent JavaScript
+                <a href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf" target="_blank" download class="download-btn">Download</a>
+            </li>
+            <li>
+                You Don't Know JS
+                <a href="https://github.com/getify/You-Dont-Know-JS/raw/2nd-ed/get-started/README.md" target="_blank" class="download-btn">Download</a>
+            </li>
+            <li>
+                Clean Code
+                <a href="#" class="download-btn" onclick="alert('Sorry, this file is not available for download yet.')">Download</a>
+            </li>
+            <li>
+                JavaScript: The Good Parts
+                <a href="#" class="download-btn" onclick="alert('Sorry, this file is not available for download yet.')">Download</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Games</h2>
+        <ul>
+            <li>
+                Tic Tac Toe
+                <a href="#" class="download-btn" onclick="alert('Sorry, this game is not available for download yet.')">Download</a>
+            </li>
+            <li>
+                Puzzle Master
+                <a href="#" class="download-btn" onclick="alert('Sorry, this game is not available for download yet.')">Download</a>
+            </li>
+            <li>
+                Space Invaders
+                <a href="#" class="download-btn" onclick="alert('Sorry, this game is not available for download yet.')">Download</a>
+            </li>
+            <li>
+                Platformer Pro
+                <a href="#" class="download-btn" onclick="alert('Sorry, this game is not available for download yet.')">Download</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Apps</h2>
+        <ul>
+            <li>
+                Weather Now
+                <a href="#" class="download-btn" onclick="alert('Sorry, this app is not available for download yet.')">Download</a>
+            </li>
+            <li>
+                Task Manager
+                <a href="#" class="download-btn" onclick="alert('Sorry, this app is not available for download yet.')">Download</a>
+            </li>
+            <li>
+                Fitness Buddy
+                <a href="#" class="download-btn" onclick="alert('Sorry, this app is not available for download yet.')">Download</a>
+            </li>
+            <li>
+                Photo Editor
+                <a href="#" class="download-btn" onclick="alert('Sorry, this app is not available for download yet.')">Download</a>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer>
+    &copy; 2024 Your Website. All rights reserved.
+</footer>
+
+<script>
+    // Prevent default navigation on placeholders
+    document.querySelectorAll('a.download-btn').forEach(btn => {
+        btn.addEventListener('click', event => {
+            if (btn.getAttribute('href') === '#') {
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
